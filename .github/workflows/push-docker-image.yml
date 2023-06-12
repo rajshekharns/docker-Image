@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v3 # first action : checkout source code
     - name: docker login
       run: |
-        echo "$DOCKER_PASSWORD" | docker login --username $DOCKER_USER foo --password-stdin  
+        $echo "$DOCKER_PASSWORD" | docker login --username $DOCKER_USER foo --password-stdin  
     - name: Build the Docker image # push The image to the docker hub
       run: docker build . --file Dockerfile --tag python-docker-image:$(date +%s)
     - name: Docker Push
