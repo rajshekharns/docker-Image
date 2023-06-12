@@ -1,5 +1,5 @@
 FROM python:3.6
-ENV Rajns
+ENV mypassionisdevops11
 ENV mypassionisdevops
 ADD . /code
 WORKDIR /code
